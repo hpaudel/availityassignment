@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Availity
 {
@@ -8,15 +9,25 @@ namespace Availity
         {
             try
             {
-                string value = "";
+                string[] csvLines=null;
                 string extension = "";
-                CreateFileObject.CreateParser(value,extension);
+                string path = @"c:/File/file.csv";
+
+                if(!File.Exists(path))
+                {
+                    Console.Write($"No file {path} found");
+                    return; 
+                }
+                csvLines = File.ReadAllLines(path);
+                FileInfo fi = new FileInfo(path);
+                extension = fi.Extension;
+                CreateFileObject.CreateParser(csvLines, extension);
                 Console.Read();
 
             }
             catch (Exception ex)
             {
-                Console.Write(ex.Message);
+                Logs.Log(ex.Message);
             }
         }
     }
