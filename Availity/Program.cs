@@ -6,7 +6,18 @@ namespace Availity
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            try
+            {
+                string value = "";
+                string extension = "";
+                CreateFileObject.CreateParser(value,extension);
+                Console.Read();
+
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
         }
     }
 }

@@ -1,0 +1,14 @@
+C:\Availity\Availity\bin\Debug\netcoreapp3.1\Availity.exe
+C:\Availity\Availity\bin\Debug\netcoreapp3.1\Availity.deps.json
+C:\Availity\Availity\bin\Debug\netcoreapp3.1\Availity.runtimeconfig.json
+C:\Availity\Availity\bin\Debug\netcoreapp3.1\Availity.runtimeconfig.dev.json
+C:\Availity\Availity\bin\Debug\netcoreapp3.1\Availity.dll
+C:\Availity\Availity\bin\Debug\netcoreapp3.1\Availity.pdb
+C:\Availity\Availity\obj\Debug\netcoreapp3.1\Availity.csproj.AssemblyReference.cache
+C:\Availity\Availity\obj\Debug\netcoreapp3.1\Availity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Availity\Availity\obj\Debug\netcoreapp3.1\Availity.AssemblyInfoInputs.cache
+C:\Availity\Availity\obj\Debug\netcoreapp3.1\Availity.AssemblyInfo.cs
+C:\Availity\Availity\obj\Debug\netcoreapp3.1\Availity.csproj.CoreCompileInputs.cache
+C:\Availity\Availity\obj\Debug\netcoreapp3.1\Availity.dll
+C:\Availity\Availity\obj\Debug\netcoreapp3.1\Availity.pdb
+C:\Availity\Availity\obj\Debug\netcoreapp3.1\Availity.genruntimeconfig.cache
