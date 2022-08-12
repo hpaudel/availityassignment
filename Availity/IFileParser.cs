@@ -2,6 +2,6 @@
 {
     interface IFileParser
     {
-        public void Parser(string[] csvString);
+        public void Parser(string path);
     }
 }

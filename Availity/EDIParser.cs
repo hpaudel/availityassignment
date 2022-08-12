@@ -6,7 +6,7 @@ namespace Availity
 {
     class EDIParser : IFileParser
     {
-        public void Parser(string[] csvString)
+        public void Parser(string path)
         {
             throw new NotImplementedException();
         }

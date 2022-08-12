@@ -9,7 +9,7 @@ namespace Availity
         {
             try
             {
-                string[] csvLines=null;
+               
                 string extension = "";
                 string path = @"c:/File/file.csv";
 
@@ -18,10 +18,10 @@ namespace Availity
                     Console.Write($"No file {path} found");
                     return; 
                 }
-                csvLines = File.ReadAllLines(path);
+                
                 FileInfo fi = new FileInfo(path);
                 extension = fi.Extension;
-                CreateFileObject.CreateParser(csvLines, extension);
+                CreateFileObject.CreateParser(path, extension);
                 Console.Read();
 
             }

@@ -1,19 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Availity
 {
     class CSVParser : IFileParser
     {
-        public void Parser(string[] csvString)
+        public void Parser(string path)
         {
+
+            string[] csvString = null;
+
             try
             {
                 
 
                 IList<User> userList = new List<User>();
-                
+
+                csvString = File.ReadAllLines(path);
+
                 for (int i=1;i<csvString.Length;i++)
                 {
                     
@@ -29,10 +35,20 @@ namespace Availity
                     };
 
                     userList.Add(user);
-                    
-                }
+                    var result = userList.GroupBy(u => u.Insurance);
 
-                Console.WriteLine(userList);
+                    foreach(var userGroup in result)
+                    {
+                        
+                        foreach(var item in userGroup)
+                        {
+                            Console.WriteLine($"{item.UserId}{item.FirstName}{item.LastName}{item.Version}{item.Insurance}");
+                        }
+
+                    }
+                 
+                }
+                
 
             }
             catch (Exception)
