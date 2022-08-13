@@ -20,9 +20,9 @@ namespace Availity
 
                 csvString = File.ReadAllLines(path);
 
-                for (int i=1;i<csvString.Length;i++)
+                for (int i = 1; i < csvString.Length; i++)
                 {
-                    
+
                     string[] values = csvString[i].Split(',');
 
                     User user = new User
@@ -35,20 +35,20 @@ namespace Availity
                     };
 
                     userList.Add(user);
-                    var result = userList.GroupBy(u => u.Insurance);
-
-                    foreach(var userGroup in result)
-                    {
-                        
-                        foreach(var item in userGroup)
-                        {
-                            Console.WriteLine($"{item.UserId}{item.FirstName}{item.LastName}{item.Version}{item.Insurance}");
-                        }
-
-                    }
-                 
                 }
-                
+                var userGroups = userList.GroupBy(u => u.Insurance);
+
+                foreach (var ulist in userGroups)
+                {
+
+                    Console.WriteLine($"By {ulist.Key}");
+                    foreach (var item in ulist)
+                    {
+                        Console.WriteLine($"{item.UserId}{item.FirstName}{item.LastName}{item.Version}{item.Insurance}");
+                    }
+
+                }
+
 
             }
             catch (Exception)

@@ -9,16 +9,19 @@ namespace Availity
         {
             try
             {
-               
+                /* Assignment 4 *****/
+                //bool check = Checker.IsBalanced("[{()}]");
+
+                /* Assignment 6 *****/
                 string extension = "";
                 string path = @"c:/File/file.csv";
 
-                if(!File.Exists(path))
+                if (!File.Exists(path))
                 {
                     Console.Write($"No file {path} found");
-                    return; 
+                    return;
                 }
-                
+
                 FileInfo fi = new FileInfo(path);
                 extension = fi.Extension;
                 CreateFileObject.CreateParser(path, extension);
