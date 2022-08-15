@@ -12,27 +12,40 @@ namespace Availity
         {
            
             bool IsBalanced = false;
-
             Stack<char> stack = new Stack<Char>();
-            
-            foreach (char c in value)
+            if (value.Length > 0)
             {
-                if (c=='(' || c=='{' || c=='[')
-                    stack.Push(c);
-                else
+                foreach (char c in value)
                 {
-                    //stack.Pop();
-                    char p = stack.Peek();
+                    if (c == '(' || c == '{' || c == '[') stack.Push(c);
+                    else
+                    {
+                        char top = stack.Peek();
 
-                    if (c==p) stack.Pop();
+                        if (top == '(')
+                        {
+                            if (c != ')') return false;
+                            stack.Pop();
+
+                        }
+                        if (top == '{')
+                        {
+                            if (c != '}') return false;
+                            stack.Pop();
+                        }
+                        if (top == '[')
+                        {
+                            if (c != ']') return false;
+                            stack.Pop();
+                        }
+
+                    }
+
+
+                    if (stack.Count == -1) IsBalanced = false;
                 }
-
-                if (stack.Count == -1) IsBalanced = false;
+                if (stack.Count == 0) IsBalanced = true;
             }
-
-            if (stack.Count == 0) IsBalanced = true;
-
-
             return IsBalanced;
         }
 

@@ -10,7 +10,8 @@ namespace Availity
             try
             {
                 /* Assignment 4 *****/
-                //bool check = Checker.IsBalanced("[{()}]");
+                bool check = Checker.IsBalanced("(");
+                Console.WriteLine($"Parenthesis is Balanced: {check}");
 
                 /* Assignment 6 *****/
                 string extension = "";
